@@ -21,7 +21,8 @@ Vue.component("AppHome", require("./components/AppHome.vue"));
 import router from "./Router/router.js";
 import User from "./Helpers/User";
 window.User = User;
-// console.log(User.id());
+window.EventBus = new Vue();
+// console.log(User.loggedIn());
 const app = new Vue({
     el: "#app",
     router
