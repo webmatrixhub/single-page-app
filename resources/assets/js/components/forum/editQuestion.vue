@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-card style="padding-top:1px">
+    <v-card class="pt-1">
       <v-form style="margin:50px 20px 20px 20px" @submit.prevent="update">
         <v-text-field
             v-model="form.title"
