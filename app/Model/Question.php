@@ -16,6 +16,7 @@ class Question extends Model
     });
   }
   protected $fillable = ['title', 'slug', 'body', 'category_id', 'user_id'];
+  protected $with = ['replies'];
   // protected $guarded = [];
 
   public function getRouteKeyName()
@@ -28,7 +29,7 @@ class Question extends Model
   }
   public function replies()
   {
-    return $this->hasMany(Reply::class);
+    return $this->hasMany(Reply::class)->latest();
   }
   public function category()
   {
